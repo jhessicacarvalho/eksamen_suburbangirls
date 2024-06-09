@@ -1,0 +1,219 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import "../styles/general.css";
+import PolaroidCard from "../components/PolaroidCard.astro";
+import GalleriDeltager from "../components/GalleriDeltager.astro";
+import DeltagerBTN from "../components/DeltagerBTN.astro";
+---
+
+<MainLayout>
+  <img
+    class="forside_img"
+    src="../deltager/deltager_forside1.webp"
+    alt="Forsidebillede med alle deltagerne i forløbet"
+  />
+  <h1 class="margin" >Deltagerne 2023</h1>
+  <section class="section top_grid margin">
+    <article>
+      <PolaroidCard text="2023">
+        <img
+          class="polaroid_img"
+          src="../polaroid/everyone_3.webp"
+          alt="Fællesbillede"
+        />
+      </PolaroidCard>
+    </article>
+
+    <div>
+      <iframe
+        title="SUBURBANGIRLS spotify playlist"
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"></iframe>
+      <DeltagerBTN selectBtn="button1" />
+    </div>
+  </section>
+
+  <div class="gallery-images-container">
+    <GalleriDeltager classId="section1" />
+  </div>
+
+  <img
+    style="width: 100%;"
+    src="../paper-texture_pink_01.gif"
+    alt="pink overrevet papir"
+  />
+  <div id="pink_baggrund">
+    <h1 class="margin">Deltagerne 2022</h1>
+    <section class="section top_grid margin">
+      <article>
+        <PolaroidCard text="2022">
+          <img
+            class="polaroid_img"
+            src="../polaroid/everyone_2.webp"
+            alt="Fællesbillede"
+          />
+        </PolaroidCard>
+      </article>
+      <div>
+        <iframe
+          title="SUBURBANGIRLS spotify playlist"
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
+          width="100%"
+          height="352"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+        <DeltagerBTN selectBtn="button2" />
+      </div>
+    </section>
+
+    <div class="gallery-images-container">
+      <GalleriDeltager classId="section2" />
+    </div>
+  </div>
+
+  <img class="last_torn_paper" src="../paper-texture_pink_03.gif" alt="" />
+
+  <h1 class="nederst_h1">Deltagerne 2021</h1>
+  <section class="section top_grid margin">
+    <article>
+      <PolaroidCard text="2021">
+        <img
+          class="polaroid_img"
+          src="../polaroid/sub_convert.webp"
+          alt="Fællesbillede"
+        />
+      </PolaroidCard>
+    </article>
+    <div>
+      <iframe
+        title="SUBURBANGIRLS spotify playlist"
+        style="border-radius: 12px"
+        src="https://open.spotify.com/embed/artist/0P0xnSm6cTBPpAQPY78oHN?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      >
+      </iframe>
+      <DeltagerBTN selectBtn="button3" />
+    </div>
+  </section>
+  <div class="gallery-images-container">
+    <GalleriDeltager classId="section3" />
+  </div>
+</MainLayout>
+
+<style>
+  .polaroid_img {
+    width: 100%;
+    height: auto;
+  }
+  .nederst_h1 {
+    margin-top: -44px;
+    margin-left: 1.4em;
+  }
+  .margin {
+    /* margin-top: 2em; */
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+  }
+  .forside_img {
+    width: 100%;
+    height: auto;
+    /* overflow: hidden; */
+  }
+  .grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: left; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    /* Får containeren til at fylde hele højden af viewporten */
+  }
+
+  .button {
+    border: solid;
+    border-color: black;
+    background-color: rgba(255, 255, 255, 0.746);
+    border-width: medium;
+    border-radius: 12px;
+    color: black;
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: Amiko-Bold;
+  }
+
+  #pink_baggrund {
+    background-color: var(--pink);
+    margin: 0%;
+    position: relative;
+    top: -31px;
+    height: auto;
+    z-index: 1;
+  }
+
+  .last_torn_paper {
+    top: -60px;
+    width: 100%;
+    position: relative;
+    rotate: 1deg;
+  }
+  /*polaroid*/
+
+  @media (min-width: 769px) {
+    .top_grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      margin-top: 50px;
+    }
+    .top_grid article {
+      order: 2; /* Dette gør at "figure" bliver sat som nummer to når det kommer ind i et grid */
+    }
+    .top_grid iframe {
+      order: 1; /*  Dette gør at "iframe" bliver sat som nummer to når det kommer ind i et grid  */
+    }
+    .margin {
+      margin-top: 2em;
+      margin-left: 10rem;
+      margin-right: 10rem;
+    }
+
+    #pink_baggrund {
+      background-color: var(--pink);
+      margin: 0%;
+      position: relative;
+      top: -85px;
+      height: auto;
+    }
+    .last_torn_paper {
+      top: -120px;
+      width: 100%;
+      position: relative;
+      rotate: 1deg;
+    }
+    .nederst_h1 {
+      margin-top: -140px;
+      margin-left: 10rem;
+    }
+  }
+</style>

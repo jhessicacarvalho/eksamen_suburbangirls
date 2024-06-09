@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #d9d9d9;
+}
+:root {
+  --grey: #d9d9d9;
+  --pink: #f499b8;
+  --green: #575b47;
+  --shadow: rgb(81, 77, 77);
+}
+@font-face {
+  font-family: Amiko-Regular;
+  src: url(../fonts/Amiko-Regular.ttf);
+}
+@font-face {
+  font-family: Amiko-Bold;
+  src: url(../fonts/Amiko-Bold.ttf);
+}
+@font-face {
+  font-family: mostWasted;
+  src: url(../fonts/mostwasted.woff2);
+}
+
+@font-face {
+  font-family: oswald;
+  src: url(../fonts/oswald.ttf);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-family: oswald, sans serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .overskrift {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: oswald, sans serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-family: Amiko-Regular;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+  }
+
+  ol {
+    margin-left: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  ol li {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  ul {
+    margin-left: 1.2rem;
+    margin-bottom: 0rem;
+  }
+
+  ul li {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 769px) {
+  h1 {
+    font-family: oswald, sans serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2.2rem;
+  }
+
+  .overskrift {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-family: oswald, sans serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-family: Amiko-Regular;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+  }
+
+  ol {
+    margin-left: 1.5rem;
+    margin-bottom: 0rem;
+  }
+
+  ol li {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
+
+  ul li {
+    font-family: Amiko-Regular;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+.custom-text br {
+  line-height: 10; /* Tilføjer større mellemrum specifikt til linjeskift */
+}
+.custom-text {
+  line-height: 10; /* Juster dette tal for at få større eller mindre mellemrum */
+}

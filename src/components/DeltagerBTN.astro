@@ -1,0 +1,68 @@
+---
+const { selectBtn } = Astro.props;
+---
+
+<div class="button-container">
+  <button class={`${selectBtn}`}
+    >Se deltagerne <span class="caret"></span></button
+  >
+</div>
+<style>
+  .button-container {
+    display: flex;
+    justify-content: left; /* Centrerer horisontalt */
+    align-items: center; /* Centrerer vertikalt */
+    /* Får containeren til at fylde hele højden af viewporten */
+  }
+
+  .forsvind {
+    display: none;
+  }
+  button {
+    border: solid;
+    border-color: var(--green);
+    background-color: rgba(255, 255, 255, 0.682);
+    border-width: medium;
+    border-radius: 12px;
+    color: var(--green);
+    padding: 7px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-family: Amiko-Regular;
+  }
+  .caret {
+    border-top: 10px solid var(--green);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+  }
+</style>
+
+<script>
+  import { createGetCollection } from "astro/content/runtime";
+
+  const btn1 = document.querySelector(".button1");
+  const btn2 = document.querySelector(".button2");
+  const btn3 = document.querySelector(".button3");
+  const section1 = document.querySelector(".section1");
+  const section2 = document.querySelector(".section2");
+  const section3 = document.querySelector(".section3");
+
+  btn1.addEventListener("click", () => {
+    section1.classList.toggle("forsvind");
+  });
+  btn2.addEventListener("click", () => {
+    section2.classList.toggle("forsvind");
+  });
+  btn3.addEventListener("click", () => {
+    section3.classList.toggle("forsvind");
+  });
+</script>
